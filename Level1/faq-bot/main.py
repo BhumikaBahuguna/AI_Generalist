@@ -2,25 +2,24 @@ import requests
 
 def faq_bot(user_input):
     prompt = f"""
-You are an intelligent FAQ assistant.
+You are a precise FAQ assistant.
 
-Objective:
-Answer the question clearly and concisely.
+TASK:
+Answer the user's question clearly, concisely, and directly.
 
-Instructions:
-- Provide a direct answer
-- Use bullet points for key ideas
+RULES:
+- Maximum 80 words (STRICT limit)
+- No introductions, no filler text
+- No explanations beyond what is needed
+- If unknown, say: "Answer not available."
 
-Constraints:
-- STRICTLY under 100 words
-- Do NOT exceed limit
-- Avoid unnecessary explanation
-
-Output Format:
+FORMAT:
 Answer:
-<your answer>
+- Point 1
+- Point 2
+- Point 3 (only if needed)
 
-User Question:
+QUESTION:
 {user_input}
 """
 
